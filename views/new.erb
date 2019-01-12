@@ -1,0 +1,12 @@
+<form method="post" action="/new" name="new">
+    <div class="mb-3">
+      <label>メモタイトル</label>
+      <input type="text" class="form-control" name="title" placeholder="明日の買い物">
+    </div>
+    <div class="mb-3">
+      <label for="validationTextarea">メモ本文</label>
+      <textarea class="form-control" name="memo" placeholder="野菜と果物を買いに行く。" required></textarea>
+    </div>
+    <button class="btn btn-primary" type="submit"><i class="fas fa-pen"></i> メモ追加</button>
+    <a class="btn btn-warning" href="/"><i class="fas fa-times"></i> キャンセル</a>
+</form>
