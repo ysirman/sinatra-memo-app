@@ -88,7 +88,7 @@ patch "/edit/:id" do
   @memo_datas[params[:id]]["title"] = params[:title]
   @memo_datas[params[:id]]["memo"] = params[:memo].gsub(/\r\n|\r|\n/, "<br />")
   write_data(file_path, @memo_datas)
-  flash[:notice] = "メモが編集されました。"
+  flash[:notice] = "メモが変更されました。"
   redirect "/"
 end
 
