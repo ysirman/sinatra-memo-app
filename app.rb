@@ -57,7 +57,7 @@ post "/new" do
     new_id = (@memo_datas.keys.map(&:to_i).sort.last + 1).to_s
   end
   # 改行を変換してから出力
-  params[:memo] = params[:memo].gsub("<br />", "\r\n")
+  params[:memo] = params[:memo].gsub(/\r\n|\r|\n/, "<br />")
   @memo_datas.store(new_id, "title" => params[:title], "memo" => params[:memo])
   write_data(file_path, @memo_datas)
   # トップページへ遷移
